@@ -11,11 +11,19 @@ namespace Lesson8
     {
         static void Main(string[] args)
         {
-            string word = "codeleet";
+            //Your Array must be the same Langth as integer Array, and Array indices should not be more than a long word 
+            string word = "codeleet";                           
             int[] indices = { 4, 5, 6, 7, 0 ,2, 1, 3, };
 
             string x = ArrayShuffle.ShuffleString(word, indices);
-            Console.WriteLine(x);
+            if (x != null)
+            {
+                Console.WriteLine(x);
+            }
+            else 
+            {
+                Console.WriteLine("Your array does not match the conditions");
+            }
             Console.ReadLine();
         }
     }

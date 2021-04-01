@@ -15,13 +15,35 @@ namespace Shuffle
         /// <param name="indices">Array of integers</param>
         public static string ShuffleString(string word, int[] indices)
         {
-            char[] wordArray = new char[word.Length];
+            if (ValidateArray(word, indices) == false)
+            {
+                return null;
+            }
 
+            char[] wordArray = new char[word.Length];
             for (int i = 0; i < wordArray.Length; i++)
             {
                 wordArray[indices[i]] = word[i];
             }
-            return new string (wordArray);
+            return new string(wordArray);
+        }
+        private static bool ValidateArray(string word, int[] indices)
+        {
+            if (word != null)
+            {
+                if (word.Length == indices.Length)
+                {
+                    for (int i = 0; i < word.Length; i++)
+                    {
+                        if (indices[i] >= word.Length)
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
