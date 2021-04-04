@@ -15,12 +15,12 @@ namespace Task4
             int value = Finder.ArrayMethods.FindVowelsCount(word);
             int valueWithoutDuplicates = Finder.ArrayMethods.FindVowelsCountWithoutDuplicates(word);
             string stringVowels = Finder.ArrayMethods.GetVowelsString(word);
-            //string stringVowelsWithoutDuplicates = Finder.ArrayMethods.GetVowelsStringWithoutDuplicates(word);
+            string stringVowelsWithoutDuplicates = Finder.ArrayMethods.GetVowelsStringWithoutDuplicates(word);
 
             Console.WriteLine($"Колличество гласных с дубликатом: {value}");
             Console.WriteLine($"Колличество гласных с без дубликатов: {valueWithoutDuplicates}");
             Console.WriteLine($"Гласные: {stringVowels}");
-            //Console.WriteLine($"Гласные без дубликатов: {stringVowelsWithoutDuplicates}");
+            Console.WriteLine($"Гласные без дубликатов: {stringVowelsWithoutDuplicates}");
             Console.ReadLine();
         }
     }
