@@ -44,14 +44,12 @@ namespace StringMethods
                 return null;
             }
             string maxLengthWord = null;
+            int value = 0;
             for (int i = 0; i < setOfWords.Length; i++)
             {
-                for (int j = 0; j < setOfWords.Length; j++)
+                if (setOfWords[i].Length > value)
                 {
-                    if (setOfWords[i].Length > setOfWords[j].Length)
-                    {
-                        maxLengthWord = setOfWords[i];
-                    }
+                    maxLengthWord = setOfWords[i];
                 }
             }
             return maxLengthWord;
