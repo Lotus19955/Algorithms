@@ -50,6 +50,7 @@ namespace StringMethods
                 if (setOfWords[i].Length > value)
                 {
                     maxLengthWord = setOfWords[i];
+                    value = setOfWords[i].Length;
                 }
             }
             return maxLengthWord;
