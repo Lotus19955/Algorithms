@@ -9,7 +9,7 @@ namespace StringMethods
     public class Methods
     {
         /// <summary>
-        /// Find numbers is string
+        /// Finds the number of numbers in the string
         /// </summary>
         /// <param name="word">Input string</param>
         /// <returns>Return number of numbers</returns>
@@ -19,24 +19,21 @@ namespace StringMethods
             {
                 return -1;
             }
-            char[] numbers = { '1', '2', '3', '4', '5', '6', '7', '8', '9', '0' };
+            
             int counter = 0;
-
+            int number;
             for (int i = 0; i < word.Length; i++)
             {
-                for (int j = 0; j < numbers.Length; j++)
+                if (int.TryParse(word[i].ToString(), out number))
                 {
-                    if (word[i] == numbers[j])
-                    {
-                        counter++;
-                    }
+                    counter++;
                 }
             }
             return counter;
         }
 
         /// <summary>
-        /// Find max length word in string
+        /// Finds the string with max length
         /// </summary>
         /// <param name="setOfWords">Input string</param>
         /// <returns>Max length word</returns>
@@ -46,18 +43,18 @@ namespace StringMethods
             {
                 return null;
             }
-            string[] maxLengthWord = new string [1];
+            string maxLengthWord = null;
             for (int i = 0; i < setOfWords.Length; i++)
             {
                 for (int j = 0; j < setOfWords.Length; j++)
                 {
                     if (setOfWords[i].Length > setOfWords[j].Length)
                     {
-                        maxLengthWord[0] = setOfWords[i];
+                        maxLengthWord = setOfWords[i];
                     }
                 }
             }
-            return maxLengthWord[0];
+            return maxLengthWord;
         }
 
         /// <summary>
@@ -76,6 +73,7 @@ namespace StringMethods
             }
             return false;
         }
+
         /// <summary>
         /// Validates string
         /// </summary>

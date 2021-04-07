@@ -11,7 +11,7 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            string word = "dh231n4f8f12h";
+            string word = "dh231n4f8f12h" ;
             int x = StringMethods.Methods.FindNumbersInString(word);
             if (x != -1)
             {
