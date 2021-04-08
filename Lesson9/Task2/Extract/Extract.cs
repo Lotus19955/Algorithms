@@ -45,11 +45,6 @@ namespace URLExtract
             return result;
         }
 
-        public static string ExtractsProtocol(Extract c)
-        {
-            throw new NotImplementedException();
-        }
-
         /// <summary>
         /// Finds protocol in string
         /// </summary>
