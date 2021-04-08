@@ -22,21 +22,21 @@ namespace URLExtract
 
             char[] chrSite = new char[0];
             int counter = 0;
-           
             for (int i = 0; i < site.Length; i++)
             {
                 if (site[i] == '/')
                 {
                     if (site[i - 1] == '/')
                     {
-                        for (int j = i; j < site.Length; j++)
+                        for (int j = i + 1; j < site.Length; j++)
                         {
-                            if (site[j] != '/')
+                            if (site[j] == '/')
                             {
-                                Array.Resize(ref chrSite, chrSite.Length + 1);
-                                chrSite[counter] = site[j];
-                                counter++;
+                                break;
                             }
+                            Array.Resize(ref chrSite, chrSite.Length + 1);
+                            chrSite[counter] = site[j];
+                            counter++;
                         }
                     }
                 }

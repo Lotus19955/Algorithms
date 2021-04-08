@@ -11,7 +11,7 @@ namespace Task2
     {
         static void Main(string[] args)
         {
-            string site1 = "https://www.onliner.by/";
+            string site1 = "https://github.com/Lotus19955/Algorithms/commit/88a9c36180595ec9a8b9ee6332e607fb60d24b4b";
             string site1HostName = URLExtract.Extract.ExtractsHostName(site1);
             if (site1HostName != null)
             {
